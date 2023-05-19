@@ -20,12 +20,11 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
            
-    - name: Buildando o Projeto
+    - name: Compilando o Projeto
       run: javac -cp src src/Main.java
 
-    - name: Executando o Teste
+    - name: Executando Projeto Teste
       run: java -cp src src/Teste.java
-      
       
       
       
