@@ -27,7 +27,7 @@ jobs:
     - name: Executando o Teste
       run: java -cp src src/Teste.java
 
-    - name: Deploy to Docker
+    - name: Deploy do git para o Docker
       uses: mr-smithers-excellent/docker-build-push@v6
       with:
         image: henriqu33bbr/simuladodevops
