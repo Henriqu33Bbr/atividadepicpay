@@ -28,8 +28,8 @@ jobs:
     - name: Executando o Teste
       run: java -cp src src/Teste.java
 
+    - name: Deploy no Docker
     - uses: mr-smithers-excellent/docker-build-push@v6
-      name: Deploy no Docker
       with:
         image: henriqu33bbr/simuladodevops
         
