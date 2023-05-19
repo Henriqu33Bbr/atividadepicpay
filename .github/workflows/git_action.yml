@@ -5,9 +5,7 @@ name: Java CI
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches: [ "DEVELOP" ]
 
 jobs:
   build:
@@ -21,7 +19,6 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
-           
            
     - name: Buildando o Projeto
       run: javac -cp src src/Main.java
