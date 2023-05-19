@@ -4,6 +4,8 @@
 name: Java CI
 
 on:
+  push:
+      branches: [ "DEVELOP" ]
   pull_request:
       branches: [ "QA" ]
 
