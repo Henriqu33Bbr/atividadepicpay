@@ -19,19 +19,9 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
-        
-    
-    
-    
-    
-    
-    
-    
-    
-    
+          
     - name: Compilar o Java
       run: javac -cp src src/Main.java
-
 
     - name: Executando o Teste
       run: java -cp src src/Teste.java
