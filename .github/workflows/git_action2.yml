@@ -28,13 +28,14 @@ jobs:
     - name: Executando o Teste
       run: java -cp src src/Teste.java
 
-    - name: Deploy no Docker
-      uses: mr-smithers-excellent/docker-build-push@v6
-      with:
-        image: henriqu33bbr/simuladodevops
-        tags: v1.${{ github.run_number }}
-        registry: docker.io
-        dockerfile: dockerfile
-        username: ${{secrets.DOCKER_USERNAME}}
-        password: ${{secrets.DOCKER_PASSWORD}}
+  - name: Deploy no Docker
+    uses: mr-smithers-excellent/docker-build-push@v6
+    with:
+      image: henriqu33bbr/simuladodevops
+      tags: v1.${{ github.run_number }}
+      registry: docker.io
+      dockerfile: dockerfile
+      username: ${{secrets.DOCKER_USERNAME}}
+      password: ${{secrets.DOCKER_PASSWORD}}
+
 
