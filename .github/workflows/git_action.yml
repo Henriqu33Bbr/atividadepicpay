@@ -1,0 +1,39 @@
+# This workflow will build a Java project with Ant
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-ant
+
+name: Java CI
+
+on:
+  push:
+    branches: [ "DEVELOP" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up JDK 11
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+           
+    - name: Compilando o Projeto
+      run: javac -cp src src/Main.java
+
+    - name: Executando Projeto Teste
+      run: java -cp src src/Teste.java
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
